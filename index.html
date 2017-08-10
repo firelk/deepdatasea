@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>深海棱镜-线下零售场景消费金融与场景信用服务商-北京深海棱镜</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="keywords" content="深海,深海棱镜,深海棱镜公司,北京深海棱镜,深海棱镜科技,零售消费金融,零售消费金融服务商,线下零售服务商,零售消费金融服务提供商,百货消费金融服务提供商,超市消费金融服务提供商" />
+  <meta name="description" content="深海棱镜,国内领先的线下零售场景消费金融与场景信用服务商，致力于通过多方协同，帮助零售企业实现面向本地会员的信用化，基于会员消费时在智能POS支付场景中无缝融入金融服务，建立消费金融的经营能力。" />
+  <meta name="author" content="link">
+  <meta name="Resource-type" content="Document" />
+  <link rel="stylesheet" type="text/css" href="./libs/fullPage/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+  <script src="./libs/jquery-1.11.2.min.js"></script>
+  <script src="./libs/jquery-ui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./libs/fullPage/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript">
+  function isIE() {
+
+    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
+      return 6;
+    } else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {
+      return 7;
+    } else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0") {
+      return 8;
+    } else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE9.0") {
+      return 9;
+    }
+    return false;
+
+  }
+  $(document).ready(function() {
+    if (isIE()<9) { //ie
+      $('body').removeClass('html5');
+    }
+    $('#fullpage').fullpage({
+      // sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+      anchors: ['index', 'product', 'product-2', 'product-3', 'product-4', 'tech', 'examples', 'us'],
+      menu: '#menu',
+      navigationTooltips: ['product', 'product-2', 'product-3', 'product-4'],
+      afterLoad: function(anchorLink, index) {
+        // console.log(anchorLink, index)
+        $('.item>a').removeClass('on')
+        if (index >= 2 && index <= 5) {
+          $('.product>a').addClass('on')
+        } else if (index == 6) {
+          $('.tech>a').addClass('on')
+        } else if (index == 7) {
+          $('.examples>a').addClass('on')
+        } else if (index == 8) {
+          $('.us>a').addClass('on')
+        }
+      },
+      onLeave: function(index, nextIndex, direction) {
+        // var leavingSection = $(this);
+        // if (nextIndex>1||nextIndex>6) {
+        //   $('.product').addClass('active')
+        //   // console.log(nextIndex,$(this))
+        // }
+        // console.log('222',index, nextIndex, direction)
+      }
+    });
+    $('#menu').on('click', '.item', function(event) {
+      // event.preventDefault();
+      event.stopPropagation()
+      $(this).parents('ul').find('ul').hide()
+      $(this).parents('ul').find('a').removeClass('on')
+      $(this).find('ul').show()
+      $(this).children('a').addClass('on')
+
+    });
+    $('body').click(function(event) {
+      /* Act on the event */
+      $('#menu ul').hide()
+      $('#menu ul').find('a').removeClass('on')
+    });
+  });
+  </script>
+</head>
+
+<body class="html5">
+  <ul id="menu">
+    <li class="logo"><img src="./imgs/logo.png" height="100%" alt="" class=""></li>
+    <li class="index item" data-menuanchor="index" class="active"><a href="#index">首页</a></li>
+    <li class="product item">
+      <a class="">产品</a>
+      <ul class="" style="display:none">
+        <li data-menuanchor="product"><a class="line" href="#product">消费金融</a></li>
+        <li data-menuanchor="product-2"><a class="line" href="#product-2">智能POS</a></li>
+        <li data-menuanchor="product-3"><a class="line" href="#product-3">场景信用</a></li>
+        <li data-menuanchor="product-4"><a href="#product-4">运营方案</a></li>
+      </ul>
+    </li>
+    <li class="tech item"><a class="">技术</a>
+      <!-- :
+产品：消费金融、智能POS、场景信用、运营方案
+技术：D-Risk、D-Persona、D-Brain
+:
+案例：合作伙伴、经典案例
+我们：企业介绍、核心团队、联系我们 -->
+      <ul class="" style="display:none">
+        <li data-menuanchor="tech"><a class="line" href="#tech">D-Risk</a></li>
+        <li data-menuanchor="tech"><a class="line" href="#tech">D-Persona</a></li>
+        <li data-menuanchor="tech"><a href="#tech">D-Brain</a></li>
+      </ul>
+    </li>
+    <li class="examples item"><a>案例</a>
+      <ul class="" style="display:none">
+        <li data-menuanchor="examples"><a class="line" href="#examples">合作伙伴</a></li>
+        <li data-menuanchor="examples"><a href="#examples">经典案例</a></li>
+      </ul>
+    </li>
+    <li class="us item"><a>我们</a>
+      <ul class="" style="display:none">
+        <li data-menuanchor="us"><a class="line" href="#us">企业介绍</a></li>
+        <li data-menuanchor="us"><a class="line" href="#us">核心团队</a></li>
+        <li data-menuanchor="us"><a href="#us">联系我们</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div id="fullpage">
+    <!-- page1 start -->
+    <div class="section page1" id="section0">
+      <div class="intro">
+        <div class="banner">
+          <div class="w960">
+            <img src="./imgs/banner1.png" alt="">
+          </div>
+        </div>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="items w960">
+                <ul class="">
+                  <li>
+                    <div class="item " data-menuanchor="product">
+                      <a href="#product">
+                        <span class="icon icon-1"><img src="./imgs/xiaojin-botton-sel.png" alt=""></span>
+                        <h5>消费金融</h5>
+                        <p class="">
+                          以消费金融作为杠杆
+                          <br>为商户提供增值服务
+                          <br>推动用户消费升级
+                        </p>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item" data-menuanchor="product-2">
+                      <a href="#product-2">
+                        <span class="icon icon-2"><img src="./imgs/pos-botton-sel.png" alt=""></span>
+                        <h5>智能POS</h5>
+                        <p class="">
+                          作为触点辅助消费金融
+                          <br> 打通场内多种会员权益
+                          <br> 满足市面常见支付方式
+                        </p>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item" data-menuanchor="product-3">
+                      <a href="#product-3">
+                        <span class="icon icon-3"><img src="./imgs/xinyong-botton-sel.png" alt=""></span>
+                        <h5>场景信用</h5>
+                        <p class="">
+                          填补信用人群空白区
+                          <br> 引入场景数据评分体系
+                          <br> 实现广泛基础授信覆盖
+                        </p>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item" data-menuanchor="product-4">
+                      <a href="#product-4">
+                        <span class="icon icon-4"><img src="./imgs/yunying-botton-sel.png" alt=""></span>
+                        <h5>运营方案</h5>
+                        <p class="">
+                          依托工具支持业务运营
+                          <br> 结合经营制定营销方案
+                          <br> 完善服务体系快速对接
+                        </p>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page end -->
+    <!--    <div class="section active" id="section1">
+        <div class="slide" id="slide1">
+            <div class="intro">
+                <img src="./imgs/banner1.png" alt="">
+            </div>
+        </div>
+        <div class="slide active" id="slide2">
+            <h1>Slide 2</h1>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Slide 3</h1>
+        </div>
+
+    </div> -->
+    <!-- page2 start -->
+    <div class="section page2" id="section2">
+      <div class="intro">
+        <h3>消费金融</h3>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="content">
+                <div class="left"><img src="./imgs/xiaojin-photo.png" alt=""></div>
+                <div class="right">
+                  <div class="items">
+                    <ul class="">
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-1"><img src="./imgs/xiaojin-ywbz-botton.png" alt=""></span>
+                          <h5>业务本质</h5>
+                          <p class="">
+                            以消费金融为杠杆，为商户提供增值服务
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-2"><img src="./imgs/xiaojin-yycj-botton.png" alt=""></span>
+                          <h5>应用场景</h5>
+                          <p class="">
+                            以“虚拟信用卡”概念推动用户消费升级
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-3"><img src="./imgs/xiaojin-sxms-botton.png" alt=""></span>
+                          <h5>授信模式</h5>
+                          <p class="">
+                            追加消费数据完善风控，填补信用空白区
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-4"><img src="./imgs/xiaojin-fgrq-botton.png" alt=""></span>
+                          <h5>覆盖人群</h5>
+                          <p class="">
+                            面向场内具有高粘性、高消费的优质人群
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-5"><img src="./imgs/xiaojin-zchj-botton.png" alt=""></span>
+                          <h5>政策环境</h5>
+                          <p class="">
+                            场景消费金融有国家政策扶持，有发展空间
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page2 end -->
+    <!-- page3 start -->
+    <div class="section page2 page3" id="section3">
+      <div class="intro">
+        <h3> 智能POS</h3>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="content">
+                <div class="right">
+                  <div class="items">
+                    <ul class="">
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-1"><img src="./imgs/pos-ywbz-botton.png" alt=""></span>
+                          <h5>业务本质</h5>
+                          <p class="">
+                            辅助消费金融应用作为核心交互触点
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-2"><img src="./imgs/pos-yycj-botton.png" alt=""></span>
+                          <h5>应用场景</h5>
+                          <p class="">
+                            可应用场内、场外会员所能覆盖到的支付场景
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-3"><img src="./imgs/pos-cpys-botton.png" alt=""></span>
+                          <h5>产品优势</h5>
+                          <p class="">
+                            涵盖会员、消费金融、积分、优惠券、停车券等多种业务场景
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-4"><img src="./imgs/pos-ysjz-botton.png" alt=""></span>
+                          <h5>衍生价值</h5>
+                          <p class="">
+                            满足会员权益在消费场景优化提升，增加品牌形象价值
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-5"><img src="./imgs/pos-hxgn-botton.png" alt=""></span>
+                          <h5>核心功能</h5>
+                          <p class="">
+                            实现消费金融、微信支付、支付宝支付以及传统多样性的支付方式
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="left"><img src="./imgs/pos-photo.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page3 end -->
+    <!-- page4 start -->
+    <div class="section page4 page2" id="section4">
+      <div class="intro">
+        <h3>场景信用</h3>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="content">
+                <div class="left"><img src="./imgs/xinyong-photo.png" alt=""></div>
+                <div class="right">
+                  <div class="items">
+                    <ul class="">
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-1"><img src="./imgs/changjingxinyong-icon-1.png" alt=""></span>
+                          <h5>补全信用空白区</h5>
+                          <p class="">
+                            通过线下消费行为风控模型，覆盖了金融风控
+                            <br>模型与线上消费行为风控模型无法触达的信用
+                            <br>空白区
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-2"><img src="./imgs/changjingxinyong-icon-2.png" alt=""></span>
+                          <h5>引入场景粘性与场景消费能力评估</h5>
+                          <p class="">
+                            基于线下场景全景数据，评估场景粘性与场景
+                            <br>消费能力，补全面向场景的评分体系
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-3"><img src="./imgs/changjingxinyong-icon-3.png" alt=""></span>
+                          <h5>实现场景内更加广泛的基础授信覆盖</h5>
+                          <p class="">
+                            以线下消费行为风控模型为基础，基于场景粘
+                            <br>性和场景消费能力大幅度拓展了基础授信人群
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page4 end -->
+    <!-- page5 start -->
+    <div class="section page5 page2 page3" id="section5">
+      <div class="intro">
+        <h3>运营方案</h3>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="content">
+                <div class="right">
+                  <div class="items">
+                    <ul class="">
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-1"><img src="./imgs/yunying-icon-1.png" alt=""></span>
+                          <h5>业务本质</h5>
+                          <p class="">
+                            依托运营工具支持业务运营，提升卖场经营效益
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-2"><img src="./imgs/yunying-botton-sel.png" alt=""></span>
+                          <h5>应用场景</h5>
+                          <p class="">
+                            紧密结合卖场运营情况，制定经营及营销方案，
+                            <br>并驻场支持方案执行
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-3"><img src="./imgs/yunying-yycj.png" alt=""></span>
+                          <h5>运营优势</h5>
+                          <p class="">
+                            全面的基础业务支持，完善的会员及服务体系建
+                            <br>设，丰富的营销方式，全方位接口对接
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-4"><img src="./imgs/yunying-ysjz.png" alt=""></span>
+                          <h5>衍生价值</h5>
+                          <p class="">
+                            通过运营管理，依托卖场品牌优势，拓展业务范
+                            <br>围，为卖场补全服务品类，增加会员服务价值，
+                            <br>为企业开源增益
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="left"><img src="./imgs/yunying-photo.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page5 end -->
+    <!-- page7 start -->
+    <div class="section page7 page2" id="section4">
+      <div class="intro">
+        <h3>核心技术</h3>
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+              <div class="content">
+                <div class="w960">
+                  <div class="items">
+                    <ul class="">
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-1"><img src="./imgs/jishu-fkyq.png" alt=""></span>
+                          <h5>【D-Risk】深海场景风控引擎</h5>
+                          <p class="">
+                            基于FICO评分卡体系实现，并面向具体场景进行了针对性优化，支撑场景信用评估。在金融风控模型与线上消费行为风控模型的基础上，补全了线下消费行为风控模型，使深海风控体系在场景内实现了金融、线上、线下的全方位评测覆盖。
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-2"><img src="./imgs/jishu-hxxt.png" alt=""></span>
+                          <h5>【D-Persona】深海消费者画像系统</h5>
+                          <p class="">
+                            以5层深度1000+标签项的用户画像体系作为基础，通过场景大数据的分析挖掘支撑场景运营业务。在业务层由数据采集、特征工程、数据挖掘、业务定义、项目分析等处理环节构成，面向运营人员提供了基于标签筛选引擎、规则引擎、统计分析引擎等技术工具支撑的分析平台。
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item">
+                          <span class="icon icon-3"><img src="./imgs/jishu-yhpt.png" alt=""></span>
+                          <h5>【D-Brain】深海算法评估优化平台</h5>
+                          <p class="">
+                            基于深度神经网络技术构建，通过运营数据的持续反馈，实现D-Risk与D-Persona的模型定义基础与持续模型优化。在运营过程中持续评估正负样本集的特征差异，自动调整模型实现面向运营结果的拟合合理化，生成优化建议由专家团队进行业务合理性评估，最终通过运营测试确定优化更新。
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page7 end -->
+    <!-- page6 start -->
+    <div class="section page6 page2 " id="section6">
+      <div class="intro">
+        <h3>合作伙伴</h3>
+
+        <div class="main">
+          <div class="table">
+            <div class="table-cell">
+        <div class="w960"> <img src="./imgs/anli-huoban-photo.png" alt="">
+        </div>
+
+        </div>
+      </div>
+    </div>
+        <div class="bottom pos-bottom">
+          <h3>经典案例</h3>
+          <ul class=" ">
+            <li class="">
+              <div class="item-logo"><img src="./imgs/anli-bubugao.png" alt=""></div>
+              <p class="">2016年步步高集团完成智能POS体系打通以及落地运营</p>
+              <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzIwNTYzNzY5Mw==&mid=2247483712&idx=1&sn=8e666e08f910c2e47592446e4c97fcd9&chksm=972c9012a05b190401410f4702ba3883">查看详情</a>
+            </li>
+            <li class="">
+              <div class="item-logo"><img src="./imgs/anli-jiahui.png" alt=""></div>
+              <p class="">2017年消费金融体系已在湖南佳惠集团部署上线落地运营</p>
+              <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzIwNTYzNzY5Mw==&mid=2247483713&idx=1&sn=2af42029adcc8d0b2c3c54c8cfcc1618&chksm=972c9013a05b190514ba30d14aff731">查看详情</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- page6 end -->
+    <!-- page-footer start -->
+    <div class="section page-footer" id="section-footer">
+      <div class="intro">
+        <div class="info">
+          <div class="w960">
+            <h3>深海简介：</h3>
+            <p class="">　　深海棱镜是国内领先的线下零售场景消费金融与场景信用服务商，致力于通过多方协同，帮助零售企业实现面向本地会员的信用化，基于会员消费时在智能POS支付场景中无缝融入金融服务，建立消费金融的经营能力。深海棱镜是信柏科技控股的子公司。深海棱镜沿袭母公司多年零售大数据应用中积累的大量线下零售渠道资源，借助母公司大会员产品体系以及零售创新应用的长期运营积累了深厚的零售大数据运营经验。深海棱镜运营团队成员均具备十年以上线下零售运营经验，曾主导实现线下零售业内多个经典创新应用案例。
+              <!-- <br> ——国内首个实体零售消费金融应用（湖南佳惠集团）
+              <br> ——第一例新零售智能POS体系系统（湖南步步高集团）
+              <br> ——成为行业典范的购物中心大数据分析和营销平台（北京朝阳大悦城）
+              <br> ——行业首创的购物中心大数据实时场景化营销（金鹰商贸集团）
+              <br> ——打通线上线下的大会员体系系统及智能WiFi构建（广州正佳广场） -->
+            </p>
+          </div>
+        </div>
+        <div class="items w960">
+          <ul class="">
+            <li>
+              <div class="item">
+                <span class="icon icon-1"><img src="./imgs/bailinsen.png" alt=""></span>
+                <h5>柏文森</h5>
+                <span class="blue">董事长</span>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <span class="icon icon-2"><img src="./imgs/xiexing.png" alt=""></span>
+                <h5>谢星</h5>
+                <span class="blue">总经理</span>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <span class="icon icon-3"><img src="./imgs/guohao.png" alt=""></span>
+                <h5>郭皓</h5>
+                <span class="blue">技术VP</span>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <span class="icon icon-4"><img src="./imgs/caohongbo.png" alt=""></span>
+                <h5>曹宏波</h5>
+                <span class="blue">运营VP</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom pos-bottom">
+          <div class="contact">
+            <p><span class="icon icon-tel"><img src="./imgs/women-dianhua.png" alt=""></span>010-51726503 &nbsp;&nbsp; 010-51726502 </p>
+            <p><span class="icon icon-email"><img src="./imgs/women-email.png" alt=""></span>market@deepdatasea.com  &nbsp;&nbsp; sale@deepdatasea.com</p>
+            <p><span class="icon icon-add"><img src="./imgs/women-dizhi.png" alt=""></span>北京市海淀区中关村南大街2号数码大厦A座2515室</p>
+            <div class="code-img"><img src="./imgs/code-img.png" alt="" class=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page-footer end -->
+  </div>
+</body>
+<script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?c6122bc946fb86ed5ca51e08e4978b7b"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
+</html>
